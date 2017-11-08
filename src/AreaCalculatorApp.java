@@ -7,7 +7,7 @@ public class AreaCalculatorApp {
 		MyConsole consoleInstance = new MyConsole();
         Boolean cont = true;
         while (cont) {
-        	String typeOfObject = consoleInstance.getString("Calculate area of a circle, square, or rectangle? (c/s/r): ");
+        	String typeOfObject = Console.getString("Calculate area of a circle, square, or rectangle? (c/s/r): ");
         	switch(typeOfObject) {
         	case "c":
         		Circle newCircle = new Circle(MyConsole.getInt("Enter the circle's desired radius: "));

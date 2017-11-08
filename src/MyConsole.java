@@ -19,22 +19,9 @@ public class MyConsole extends Console {
 		}
 	}
 	
-	public String getString(String prompt) {
-		while (true) {
-			System.out.print(prompt);
-			String s = sc.next();
-			if (!s.isEmpty()) {
-				return s;
-			} else {
-				System.out.println("Please give me a string");
-				continue;
-			}
-		}
-	}
-	
 	public String createUserOrCustomer(String prompt) {
 		while (true) {
-			String input = this.getString(prompt);
+			String input = Console.getString(prompt);
 			if (input.equalsIgnoreCase("c")) {
 				return input;
 			} else if (input.equalsIgnoreCase("e")) {
@@ -48,7 +35,7 @@ public class MyConsole extends Console {
 	
 	public Boolean userWantsToContinue(String prompt) {
 		while (true) {
-			String input = this.getString(prompt);
+			String input = Console.checkNull(prompt);
 			if (input.equalsIgnoreCase("y")) {
 				return true;
 			} else if (input.equalsIgnoreCase("n")) {

@@ -10,16 +10,16 @@ public class PersonManager {
         	String personType = consoleInstance.createUserOrCustomer("Create customer or employee? (c/e): ");
         	if (personType.equals("c")) {
 				Customer newCustomer = new Customer();
-				newCustomer.setFirstName(consoleInstance.getString("First Name: "));
-				newCustomer.setLastName(consoleInstance.getString("Last Name: "));
-				newCustomer.setCustomerNumber(consoleInstance.getString("Customer Number: "));
+				newCustomer.setFirstName(Console.getString("First Name: "));
+				newCustomer.setLastName(Console.getString("Last Name: "));
+				newCustomer.setCustomerNumber(Console.getString("Customer Number: "));
 				System.out.println();
 				newCustomer.display();
 			} else if(personType.equals("e")) {
 				Employee newEmployee = new Employee();
-				newEmployee.setFirstName(consoleInstance.getString("First Name: "));
-				newEmployee.setLastName(consoleInstance.getString("Last Name: "));
-				newEmployee.setSSN(consoleInstance.getString("SSN: "));
+				newEmployee.setFirstName(Console.getString("First Name: "));
+				newEmployee.setLastName(Console.getString("Last Name: "));
+				newEmployee.setSSN(Console.getString("SSN: "));
 				System.out.println();
 				newEmployee.display();
 			}

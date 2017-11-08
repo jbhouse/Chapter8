@@ -4,13 +4,6 @@ public class Console {
 
 	private static Scanner sc = new Scanner(System.in);
 	
-	public String getString(String prompt) {
-		System.out.print(prompt);
-		String s = sc.next();
-		sc.nextLine();
-		return s;
-	}
-	
 	public Boolean promptToContinue(String prompt) {
 		while (true) {
 			System.out.println(prompt);
@@ -26,6 +19,28 @@ public class Console {
 		}
 	}
 	
+	public static String checkNull(String prompt) {
+		while (true) {
+			sc.nextLine();
+			System.out.println(prompt);
+			String s = sc.nextLine();
+			if (!s.isEmpty()) {
+				return s;
+			} else {
+				System.out.println("There was an error with your input. Please hit enter to refresh this prompt.");
+				System.out.println();
+				continue;
+			}
+		}
+	}
+	
+	public static String getString(String prompt){
+		while(true) {
+			System.out.print(prompt);
+			return sc.next();
+		}
+	}
+
 	public static int getInt(String prompt) {
 		int i = 0;
 		boolean isValid = false;
