@@ -1,19 +1,10 @@
-public class Rectangle extends Shape {
+public class Rectangle extends Square {
 
-	private double width;
 	private double height;
 	
 	public Rectangle(double width, double height) {
+		super(width);
 		this.height=height;
-		this.width=width;
-	}
-	
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
 	}
 
 	public double getHeight() {
@@ -25,7 +16,7 @@ public class Rectangle extends Shape {
 	}
 	
 	public double getArea() {
-		return width*height;
+		return this.getWidth()*height;
 	}
 	
 }
